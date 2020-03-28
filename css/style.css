@@ -174,12 +174,6 @@ address {
   font-size: 25px; }
   @media screen and (max-width: 1024px) {
     address {
-      -webkit-box-flex: 1;
-      -ms-flex-positive: 1;
-      flex-grow: 1;
-      -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-      justify-content: space-between;
       position: relative;
       z-index: 11; } }
 
@@ -189,7 +183,7 @@ address {
   @media screen and (max-width: 767px) {
     .phone {
       font-size: 18px;
-      margin-right: 28px; } }
+      margin-right: 29px; } }
 
 .callback-btn {
   font-size: 16px;
