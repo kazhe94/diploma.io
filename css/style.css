@@ -121,19 +121,21 @@ header {
   -webkit-box-pack: justify;
   -ms-flex-pack: justify;
   justify-content: space-between;
-  -webkit-transition: 0.5s;
-  -o-transition: 0.5s;
-  transition: 0.5s; }
+  -webkit-transition: all 300ms ease-in-out;
+  -o-transition: all 300ms ease-in-out;
+  transition: all 300ms ease-in-out; }
   @media screen and (max-width: 1024px) {
     .nav-menu ul {
-      /* display: none; */
-      display: none;
       position: absolute;
+      display: block;
       width: 100%;
       z-index: 10;
       height: 100%;
       left: 0;
-      top: 0;
+      -webkit-transition: 1s;
+      -o-transition: 1s;
+      transition: 1s;
+      top: -100%;
       background-color: #FBFBFB;
       padding: 100px 40px 0px; } }
   @media screen and (max-width: 767px) {
@@ -141,7 +143,8 @@ header {
       padding: 100px 20px 20px; } }
 
 .nav-menu.active ul {
-  display: block; }
+  display: block;
+  top: 0; }
 
 .nav-menu ul li a {
   display: inline-block;
