@@ -87,10 +87,13 @@ button {
     @media screen and (max-width: 1024px) {
         padding: 0 40px;
     }
+    @media screen and (max-width: 767px) {
+        padding: 0 20px;
+    }
 }
 header {
 	background-color: #FBFBFB;
-	padding-bottom: 43px;
+    padding-bottom: 43px;
 }
 .header-container {
 	max-width: 1210px;
@@ -108,33 +111,46 @@ header {
         padding:0 40px;
         padding-top: 30px;
     }
+    @media screen and (max-width: 767px) {
+        padding: 0 20px;
+        padding-top: 30px;
+    }
 }
-.nav-block {
+.nav-menu ul {
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -o-flex;
     display: flex;
+    width: 290px;
     justify-content: space-between;
-    @media (max-width: 1024px) {
-        flex-direction: column;
+    transition: 0.5s;
+    @media screen and (max-width: 1024px) {
+        /* display: none; */
+        display: none;
+        position: absolute;
+        width: 100%;
+        z-index: 10;
+        height: 100%;
+        left: 0;
+        top: 0;
+        background-color: #FBFBFB;
+        padding: 100px 40px 0px;
+    }
+    @media screen and (max-width: 767px) {
+        padding: 100px 20px 20px;
     }
 }
-
-  .nav-menu ul {
-	display: -webkit-flex;
-	display: -moz-flex;
-	display: -ms-flex;
-	display: -o-flex;
-	display: flex;
-	width: 290px;
-    justify-content: space-between;
-    @media screen and (max-width: 1024px) {
-        display: none;
-    }
+.nav-menu.active ul {
+    display: block;
 }
 .nav-menu ul li a {
 	display: inline-block;
     padding-bottom: 3px;
     border: 1px solid transparent;
     @media (max-width: 1024px) {
-        display: block;
+        display: inline-block;
+        line-height: 40px;
     }
 }
 .nav-menu ul li a:focus {
@@ -150,12 +166,18 @@ address {
     align-items: center;
     font-style: normal;
     font-size: 25px;
+    @media screen and (max-width: 1024px) {
+        position: relative;
+        z-index: 11;
+    }
 }
 .phone {
     margin-right: 50px;
     font-weight: 700;
-    @media screen and (max-width: 768px) {
+    
+    @media screen and (max-width: 767px) {
         font-size: 18px;
+        margin-right: 29px;
     }
 }
 .callback-btn {
@@ -175,7 +197,7 @@ address {
     }
 }
 .btn {
-    @media screen and (max-width: 768px) {
+    @media screen and (max-width: 767px) {
         display: none;
     }
 }
@@ -189,12 +211,13 @@ address {
     border: 1px solid #f53f4f;
     outline: none;
     display: none;
-    @media screen and (max-width: 768px) {
+    @media screen and (max-width: 767px) {
         display: block;
     }
 }
 .first-block {
     background-size: contain;
+    background-color: #FBFBFB;
     position: relative;
     .fixed-container {
         display: flex;
@@ -202,7 +225,7 @@ address {
         @media screen and (max-width: 1024px) {
             padding: 0 40px;
         }
-        @media screen and (max-width: 768px) {
+        @media screen and (max-width: 767px) {
         flex-direction: column-reverse;
             align-items: center;
             padding: 0 20px;
@@ -254,8 +277,6 @@ address {
         transform: rotate(-15deg) scale(0.8);
     }
 }
-
-
 .first-block-content {
 	display: -webkit-flex;
 	display: -moz-flex;
@@ -264,9 +285,11 @@ address {
 	display: flex;
 	justify-content: space-between;
     align-items: center;
+    position: relative;
+    z-index: 1;
 }
 .first-block-text {
-    @media screen and (max-width: 768px) {
+    @media screen and (max-width: 767px) {
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -279,7 +302,7 @@ address {
     @media screen and (max-width: 1024px) {
         font-size: 50px;
     }
-    @media screen and (max-width: 768px) {
+    @media screen and (max-width: 767px) {
         font-size: 30px;
     }
 }
@@ -289,7 +312,7 @@ address {
 	font-weight: 400;
 	margin-top: 20px;
     margin-bottom: 50px;
-    @media screen and (max-width: 768px) {
+    @media screen and (max-width: 767px) {
         font-size: 16px;
         margin-top: 13px;
         margin-bottom: 25px;
@@ -307,7 +330,7 @@ address {
         background-color: #fff;
         border: 1px solid #ff4e2e;
     }
-    @media screen and (max-width: 768px) {
+    @media screen and (max-width: 767px) {
         padding: 17px 50px;
     }
 }
@@ -318,8 +341,10 @@ address {
     object-fit: contain;
 	height: auto;
     width: 100%;
+    position: relative;
+    z-index: 3;
     filter: drop-shadow(10px 3px 5px rgba(100,0,0,0.5));
-    @media screen and (max-width: 768px) {
+    @media screen and (max-width: 767px) {
         width: 258px;
     }
 }
@@ -327,16 +352,15 @@ address {
     position: absolute;
     height: 100%;
     object-fit: contain;
-    z-index: -1;
+    z-index: 0;
     bottom: 0;
     right: 0;
     overflow: hidden;
-    @media screen and (max-width: 768px) {
+    @media screen and (max-width: 767px) {
         bottom: auto;
         top: 84px;
         width: 380px;
         height: 294px;
-        right: -30px;
     }
 }
 .section-title {
@@ -346,7 +370,7 @@ address {
     padding-top: 100px;
     padding-bottom: 95px;
     background-color: transparent;
-    @media screen and (max-width: 768px) {
+    @media screen and (max-width: 767px) {
         padding-top: 50px;
         padding-bottom: 45px;
         font-size: 30px;
@@ -389,7 +413,7 @@ address {
             margin-bottom: 0;
         }
     }
-    @media screen and (max-width: 768px) {
+    @media screen and (max-width: 767px) {
         width: 100%;
         margin-bottom: 50px;
         &:nth-child(n+3) {
@@ -404,7 +428,7 @@ address {
     margin-top: 95px;
     margin-bottom: 100px;
     text-align: center;
-    @media screen and (max-width: 768px) {
+    @media screen and (max-width: 767px) {
         margin-top: 50px;
         margin-bottom: 50px;
         font-size: 16px;
@@ -425,12 +449,15 @@ address {
 .portfolio-slider {
     display: flex;
     justify-content: space-between;
-    overflow: hidden;
-    &__item {
-        text-align: center;
-        font-size: 20px;
-        font-weight: 500;
-        color: #8993ad;
+    overflow: scroll;
+}
+.portfolio-slider__item_description {
+    text-align: center;
+    font-size: 20px;
+    font-weight: 500;
+    color: #8993ad;
+    @media screen and (max-width: 767px) {
+        font-size: 18px;
     }
 }
 .portfolio-img {
@@ -468,6 +495,9 @@ address {
     color: #fff;
     position: relative;
     background: linear-gradient(45deg, #ff8f5a, #ff2f96);
+    @media screen and (max-width: 767px) {
+        padding: 50px 0;
+    }
     &-text {
         margin: 0 auto;
         max-width: 1000px;
@@ -475,18 +505,24 @@ address {
         @media screen and (max-width: 1024px) {
             padding: 0 40px;
         }
+        @media screen and (max-width: 1024px) {
+            padding: 0 20px;
+        }
     }
     &-title {
         font-size: 45px;
         line-height: 1.33;
-        @media screen and (max-width: 1100px) {
-            font-size: 30px;
+        @media screen and (max-width: 767px) {
+            font-size: 28px;
         }
     }
     &-subtitle {
         font-size: 18px;
         margin-top: 40px;
         line-height: 1.67;
+        @media screen and (max-width: 767px) {
+            font-size: 15px;
+        }
     }
 }
 .forth-block-elements {
@@ -520,7 +556,7 @@ address {
     justify-content: space-between;
     align-items: center;
     padding: 80px 0;
-    @media screen and (max-width: 768px) {
+    @media screen and (max-width: 767px) {
         flex-direction: column;
         align-items: start;
         padding-top: 50px;
@@ -530,7 +566,7 @@ address {
     font-size: 18px;
     color: #8993ad;
     line-height: 35px;
-    @media screen and (max-width: 768px) {
+    @media screen and (max-width: 767px) {
         font-size: 15px;
     }
 }
@@ -549,12 +585,12 @@ address {
         padding-left: 38px;
         background: url(../img/callback_bg.png) no-repeat left -54px;
         margin-top: 34px;
-        @media screen and (max-width: 768px) {
+        @media screen and (max-width: 767px) {
             margin-top: 25px;
             margin-bottom: 25px;
         }
     }
-    @media screen and (max-width: 768px) {
+    @media screen and (max-width: 767px) {
         font-size: 20px;
         margin-top: 48px;
         color: #8993ad;
@@ -563,7 +599,7 @@ address {
 .social {
     .callback-btn {
         padding: 16px 62px;
-        @media screen and (max-width: 768px) {
+        @media screen and (max-width: 767px) {
             background-color: #ff4e2e;
             color: #fff;
             margin-bottom: 50px;
@@ -603,4 +639,8 @@ address {
     background-color: #31293c;
     color: #fff;
     font-size: 16px;
+    @media screen and (max-width: 767px) {
+        font-size: 14px;
+        padding: 20px 0;
+    }
 }
