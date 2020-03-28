@@ -168,6 +168,8 @@ address {
     font-style: normal;
     font-size: 25px;
     @media screen and (max-width: 1024px) {
+        flex-grow: 1;
+        justify-content: space-between;
         position: relative;
         z-index: 11;
     }
@@ -178,7 +180,7 @@ address {
     
     @media screen and (max-width: 767px) {
         font-size: 18px;
-        margin-right: 29px;
+        margin-right: 28px;
     }
 }
 .callback-btn {
