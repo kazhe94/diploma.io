@@ -5,8 +5,9 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>Евгений Щербаков - создание сайтов</title>
 	<link rel="stylesheet" href="css/normalize.css">
-	<link rel="stylesheet" href="css/style.css">
 	<link rel="stylesheet" href="css/animate.css">
+	<link rel="stylesheet" href="css/swiper.min.css">
+	<link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 	<header>
@@ -20,7 +21,7 @@
 					<li><a href="#link-portfolio">Портфолио</a></li>
 					<li><a href="#link-prices">Стоимость</a></li>
 				</ul>
-			</nav>		
+			</nav>	
 			<address>
 				<a class="phone" href="tel:+79992483537">+7 (999) 248-35-37</a>
 				<button class="callback-btn btn">Заказать звонок</button>
@@ -88,24 +89,25 @@
 			<div class="fixed-container">
 				<div class="third-block-content">
 					<h3 class="section-title">Примеры моих работ</h3>
-					<div class="portfolio-wrapper">
-						<span class="arrow arrow-left"></span>
-						<span class="arrow arrow-right"></span>
-						<ul class="portfolio-slider">
-							<li class="portfolio-slider__item">
+					<div class="portfolio-wrapper swiper-container">
+						<ul class="portfolio-slider swiper-wrapper">
+							<li class="portfolio-slider__item swiper-slide">
 								<img src="img/portfolio1.png" alt="" class="portfolio-img">
 								<p class="portfolio-slider__item_description">Сайт психолога Веры Антоновой</p>
 							</li>
-							<li class="portfolio-slider__item">
+							<li class="portfolio-slider__item swiper-slide">
 								<img src="img/portfolio2.png" alt="" class="portfolio-img">
 								<p class="portfolio-slider__item_description">Сайт магазина детской одежды</p>
 							</li>
-							<li class="portfolio-slider__item">
+							<li class="portfolio-slider__item swiper-slide">
 								<img src="img/portfolio3.png" alt="" class="portfolio-img">
 								<p class="portfolio-slider__item_description">Сайт магазина «Рыболов»</p>
 							</li>
 						</ul>
+						<div class="swiper-pagination"></div>
 					</div>
+					<span class="arrow arrow-left"></span>
+					<span class="arrow arrow-right"></span>
 					<button class="more-btn section-btn">Заказать проект</button>
 				</div>
 			</div>
@@ -156,6 +158,7 @@
 		</div>
 	</footer>
 	<script src="js/jquery-3.4.1.min.js"></script>
+	<script src="js/swiper.min.js"></script>
 	<script src="js/script.js"></script>
 </body>
 </html>

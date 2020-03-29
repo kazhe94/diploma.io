@@ -20,5 +20,17 @@ $( document ).ready(function() {
         var d = $(this).attr('data-href') ? $(this).attr('data-href') : $(this).attr('href');
         $('html,body').stop().animate({ scrollTop: $(d).offset().top }, t);
     });
+
+    var swiper = new Swiper('.swiper-container', {
+        slidesPerView: 3,
+        spaceBetween: 30,
+        slidesPerGroup: 1,
+        loop: true,
+        loopFillGroupWithBlank: true,
+        navigation: {
+          nextEl: '.arrow-right',
+          prevEl: '.arrow-left',
+        },
+      });
 });
 

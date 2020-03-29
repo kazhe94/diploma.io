@@ -79,6 +79,10 @@ h1,h2,h3,h4,h5,h6 {
 }
 button {
     cursor: pointer;
+    outline: none;
+    &:active {
+        box-shadow: 5px 5px 10px rgba(100,0,0,0.5);
+    }
 }
 .fixed-container {
 	max-width: 1210px;
@@ -93,7 +97,8 @@ button {
 }
 header {
 	background-color: #FBFBFB;
-    padding-bottom: 43px;
+    padding-bottom: 20px;
+    
 }
 .header-container {
 	max-width: 1210px;
@@ -452,6 +457,7 @@ address {
         display: flex;
         flex-direction: column;
         align-items: center;
+        position: relative;
     }
 }
 .portfolio-wrapper {
@@ -460,8 +466,6 @@ address {
 }
 .portfolio-slider {
     display: flex;
-    justify-content: space-between;
-    overflow: scroll;
 }
 .portfolio-slider__item_description {
     text-align: center;
@@ -484,12 +488,20 @@ address {
     position: absolute;
     width: 60px;
     height: 60px;
-    top: 34%;
+    top: 42%;
+    outline: none;
+    z-index: 10;
     box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.08);
     cursor: pointer;
     border-radius: 50%;
     background-image: url(../img/arrow.png);
+    &:active {
+        outline: solid;
+        outline-color: rgba($color: #ff4e2e, $alpha: 0.4);
+         
+    }
     &-left {
+        left: 0;
         transform: translate(-50%);
     }
     &-right {
