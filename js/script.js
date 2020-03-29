@@ -26,11 +26,41 @@ $( document ).ready(function() {
         spaceBetween: 30,
         slidesPerGroup: 1,
         loop: true,
+        centerSlides: true,
         loopFillGroupWithBlank: true,
         navigation: {
           nextEl: '.arrow-right',
           prevEl: '.arrow-left',
         },
+        pagination: {
+            el: '.swiper-pagination',
+            clickable: true,
+          },
+        breakpoints: {
+            // when window width is >= 320px
+            320: {
+              slidesPerView: 1,
+              spaceBetween: 30,
+            },
+            // when window width is >= 480px
+            850: {
+              slidesPerView: 2,
+              spaceBetween: 30,  
+            },
+            // when window width is >= 640px
+            1170: {
+              slidesPerView: 3,
+              spaceBetween: 30,
+            }
+          }
+      });
+      $('.get-form').on('click', function(){
+          $('.modal-wrapper').addClass('modal-active');
+          $('body').addClass('stop-scroll');
+      });
+      $('.close-button').on('click', function(){
+        $('.modal-wrapper').removeClass('modal-active');
+        $('body').removeClass('stop-scroll');
       });
 });
 

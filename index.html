@@ -10,6 +10,7 @@
 	<link rel="stylesheet" href="/css/style.css">
 </head>
 <body>
+	<!-- =============header============= -->
 	<header>
 		<div class="header-container">
 			<a href="#" class="menu-btn">
@@ -24,11 +25,32 @@
 			</nav>	
 			<address>
 				<a class="phone" href="tel:+79992483537">+7 (999) 248-35-37</a>
-				<button class="callback-btn btn">Заказать звонок</button>
-				<button class="mobile-callback-btn"></button>
+				<button class="callback-btn btn get-form">Заказать звонок</button>
+				<button class="mobile-callback-btn get-form"></button>
 			</address>
 		</div>
 	</header>	
+
+	<!-- =============modal============= -->
+	<div class="modal-wrapper">
+		<div class="modal-form-wrapper">
+			<h3 class="form-title form-text">Укажите ваши контакты</h3>
+			<h5 class="form-subtitle form-text">И я свяжусь с вами</h5>
+			<form action="" class="modal-form">
+				<label for="name-input">Как вас зовут?</label>
+				<input id="name-input" type="text" class="input">
+				<label for="phone-input">Введите ваш номер телефона</label>
+				<input id="phone-input" type="tel" class="input">
+				<label for="email-input">Введите ваш email</label>
+				<input id="email-input" type="email" class="input">
+				<button class="form-button">Заказать звонок</button>
+			</form>
+			<a class="close-button">
+				<span class="cross"></span>
+			</a>
+		</div>
+	</div>
+
 
 	<!-- =============main============= -->
 	<main>
@@ -45,7 +67,7 @@
 					<div class="first-block-text">
 						<h1 class="main-title">Евгений Щербаков</h1>
 						<h2 class="main-subtitle">Frontend-разработчик и верстальщик</h2>
-						<button class="more-btn">Узнать больше</button>
+						<button class="more-btn get-form">Узнать больше</button>
 					</div>
 				</div>	
 				<div class="img-wrapper">
@@ -55,6 +77,7 @@
 			</div>
 		</section>
 
+		<!-- =================second block==================== -->
 		<section class="second-block" id="link-services">
 			<div class="fixed-container">
 				<div class="second-block-content">
@@ -79,7 +102,7 @@
 							</li>
 						</ul>
 					</div>
-					<button class="more-btn section-btn">Узнать стоимость</button>
+					<button class="more-btn section-btn get-form">Узнать стоимость</button>
 				</div>
 			</div>
 		</section>
@@ -104,15 +127,16 @@
 								<p class="portfolio-slider__item_description">Сайт магазина «Рыболов»</p>
 							</li>
 						</ul>
-						<div class="swiper-pagination"></div>
+						<div class="swiper-pagination dots"></div>
 					</div>
 					<span class="arrow arrow-left"></span>
 					<span class="arrow arrow-right"></span>
-					<button class="more-btn section-btn">Заказать проект</button>
+					<button class="more-btn section-btn get-form">Заказать проект</button>
 				</div>
 			</div>
 		</section>
 
+		<!-- =====================4th block==================== -->
 		<section class="forth-block" id="link-prices">
 			<div class="forth-block-text">
 				<h3 class="forth-block-title">Адаптивная вёрстка под все устройства	и&nbsp;браузеры от 1000 рублей всего за 4&nbsp;часа.*</h3>
@@ -128,6 +152,8 @@
 		</section>
 	</main>
 
+
+	<!-- =====================footer==================== -->
 	<footer>
 		<div class="fixed-container">
 			<div class="footer-content">
@@ -143,7 +169,7 @@
 					<a href="mailto:dmitry@alekseev.com" class="mail">dmitry@alekseev.com</a>
 				</address>
 				<div class="social">
-					<button class="callback-btn">Заказать звонок</button>
+					<button class="callback-btn get-form">Заказать звонок</button>
 					<ul>
 						<li><a class="social-link vk" target="_blank" href="https://vk.com/leon47rus"></a></li>
 						<li><a class="social-link facebook" target="_blank" href="https://www.facebook.com/evgenii.sherbakov.3"></a></li>
