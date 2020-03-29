@@ -184,7 +184,8 @@ address {
 .callback-btn {
 	font-size: 16px;
 	color: #f53f4f;
-	padding: 17px 40px;
+    padding: 17px 0;
+    width: 208px;
 	background-color: transparent;
     border: 1px solid #f53f4f;
     outline: none;
@@ -321,7 +322,8 @@ address {
     }
 }
 .more-btn {
-	padding: 17px 70px;
+    padding: 17px 0;
+    width: 270px;
 	background-color: #ff4e2e;
 	border: none;
     color: #fff;
@@ -332,8 +334,13 @@ address {
         background-color: #fff;
         border: 1px solid #ff4e2e;
     }
+    @media screen and (max-width: 1023px) {
+        width: 320px;
+        padding: 27px 0;
+    }
     @media screen and (max-width: 767px) {
-        padding: 17px 50px;
+        width: 280px;
+        padding: 20px 0;
     }
 }
 .img-wrapper {
@@ -603,8 +610,10 @@ address {
 }
 .social {
     .callback-btn {
-        padding: 16px 62px;
+        width: 248px;
         @media screen and (max-width: 767px) {
+            width: 280px;
+            padding: 20px 0;
             background-color: #ff4e2e;
             color: #fff;
             margin-bottom: 50px;
