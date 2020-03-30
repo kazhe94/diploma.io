@@ -342,7 +342,7 @@ address {
   filter: drop-shadow(10px 3px 5px rgba(100, 0, 0, 0.5)); }
   @media screen and (max-width: 767px) {
     .man {
-      width: 258px; } }
+      width: 224px; } }
 
 .ellipse-img {
   position: absolute;
@@ -354,14 +354,15 @@ address {
   right: 0; }
   @media screen and (max-width: 1100px) {
     .ellipse-img {
-      right: -30%; } }
+      right: -30%;
+      bottom: -100px; } }
   @media screen and (max-width: 767px) {
     .ellipse-img {
       bottom: auto;
-      right: 0;
-      top: 84px;
-      width: 380px;
-      height: 294px; } }
+      right: -54px;
+      top: 68px;
+      width: 444px;
+      height: 260px; } }
 
 .section-title {
   font-size: 40px;

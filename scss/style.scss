@@ -316,7 +316,7 @@ address {
     z-index: 3;
     filter: drop-shadow(10px 3px 5px rgba(100,0,0,0.5));
     @media screen and (max-width: 767px) {
-        width: 258px;
+        width: 224px;
     }
 }
 .ellipse-img {
@@ -328,13 +328,14 @@ address {
     right: 0;
     @media screen and (max-width: 1100px) {
         right: -30%;
+        bottom: -100px;
     }
     @media screen and (max-width: 767px) {
         bottom: auto;
-        right: 0;
-        top: 84px;
-        width: 380px;
-        height: 294px;
+        right: -54px;
+        top: 68px;
+        width: 444px;
+        height: 260px;
     }
 }
 .section-title {

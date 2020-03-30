@@ -6,10 +6,10 @@
     background-color: transparent;
     position: relative;
     z-index: 11;
-    @media (max-width: 1024px) {
+    @media (max-width: 1023px) {
         display: block;
     }
-    @media (max-width: 768px) {
+    @media (max-width: 767px) {
         width: 24px;
         overflow: hidden;
     }
@@ -117,7 +117,7 @@
   flex-direction: column;
   align-items: center;
   @media screen and (max-width: 767px) {
-    padding: 20px 20px;
+    padding: 50px 20px;
   }
 }
 .form-text {
@@ -179,34 +179,86 @@ label {
 }
 
 /* ==========flow elements============ */
-span {
+.flow-elements {
   position: absolute;
-  z-index: 11;
+  z-index: 9;
   font-size: 29px;
+  top: 50%;
+  left: 27%;
   background: linear-gradient(to top, #f26522, #fa0891);
   font-weight: bold;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+  @media screen and (max-width: 1023px) {
+    font-size: 35px;
+    animation-name: none!important;
+  }
+  @media screen and (max-width: 767px) {
+    font-size: 26px;
+    animation-name: none!important;
+  }
 }
 .elem1 {  
-    animation: move1 3s ease;
+    animation: move1 2s ease;
     animation-fill-mode: forwards;
+    @media screen and (max-width: 1023px) {
+      top: 90%;
+      left: 8%;
+      transform: rotate(20deg) scale(1.5);
+    }
+    @media screen and (max-width: 767px) {
+      top: 20%;
+      left: 8%;
+      transform: rotate(20deg) scale(1.2);
+    }
 }
 .elem2 {
-    animation: move2 forwards 3s ease-in-out 1s;
-    
+    animation: move2 forwards 2.2s ease-in-out 1s;
+    @media screen and (max-width: 1023px) {
+      top: 5%;
+      left: 5%;
+      transform: rotate(30deg) scale(1.3);
+    }    
+    @media screen and (max-width: 767px) {
+      transform: rotate(30deg) scale(1.1);
+    }
 }
 .elem3 {
-    animation: move3 forwards 3s ease-in-out 1.2s;
-    
+    animation: move3 forwards 2.4s ease-in-out 1.2s;
+    @media screen and (max-width: 1023px) {
+      top: 8%;
+      left: 40%;
+      transform: rotate(-30deg) scale(1.1);
+    }    
+    @media screen and (max-width: 767px) {
+      top: 0;
+      left: 60%;
+      transform: rotate(-30deg) scale(0.7);
+    }
 }
 .elem4 {
-    animation: move4 forwards 3s ease-in-out 1.4s;
-    
+    animation: move4 forwards 2.6s ease-in-out 1.4s;
+    @media screen and (max-width: 1023px) {
+      top: 5%;
+      left: 85%;
+      transform: rotate(-20deg) scale(0.8);
+    }      
+    @media screen and (max-width: 767px) {
+      top: 10%;
+      left: 80%;
+      transform: rotate(20deg) scale(0.7);
+    }  
 }
 .elem5 {
-    animation: move5 forwards 3s ease-in-out 1.6s;
-    
+    animation: move5 forwards 2.8s ease-in-out 1.6s;
+    @media screen and (max-width: 1023px) {
+      top: 85%;
+      left: 35%;
+      transform: rotate(-18deg) scale(1.0);
+    }    
+    @media screen and (max-width: 767px) {
+      display: none;
+    }
 }
 @keyframes move1 {
   0% {
