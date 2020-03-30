@@ -62,5 +62,11 @@ $( document ).ready(function() {
         $('.modal-wrapper').removeClass('modal-active');
         $('body').removeClass('stop-scroll');
       });
+      $('.modal-wrapper').on('click', function(event){
+        if (event.target == this) {
+          $('.modal-wrapper').removeClass('modal-active');
+          $('body').removeClass('stop-scroll');
+        }
+        });
 });
 

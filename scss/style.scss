@@ -56,6 +56,12 @@
 * {
 	box-sizing: border-box;
 }
+html {
+    @media screen and (min-width: 960px) {
+        margin-left: calc(100vw - 100%);
+        margin-right: 0;
+    }
+}
 body {
     font-family: 'Roboto','Helvetica',sans-serif;
     margin: 0;
