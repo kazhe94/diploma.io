@@ -36,13 +36,13 @@
 		<div class="modal-form-wrapper">
 			<h3 class="form-title form-text">Укажите ваши контакты</h3>
 			<h5 class="form-subtitle form-text">И я свяжусь с вами</h5>
-			<form action="" class="modal-form">
+			<form action="send.php" class="modal-form" method="POST">
 				<label for="name-input">Как вас зовут?</label>
-				<input id="name-input" type="text" class="input">
+				<input id="name-input" type="text" class="input" name="name">
 				<label for="phone-input">Введите ваш номер телефона</label>
-				<input id="phone-input" type="tel" class="input">
+				<input id="phone-input" type="tel" class="input" name="phone">
 				<label for="email-input">Введите ваш email</label>
-				<input id="email-input" type="email" class="input">
+				<input id="email-input" type="email" class="input" name="email">
 				<button class="form-button">Заказать звонок</button>
 			</form>
 			<a class="close-button">
