@@ -11,7 +11,7 @@ $phone = $_POST['phone'];
 
 $mail = new PHPMailer\PHPMailer\PHPMailer();
 try {
-    $msg = "Ваше сообщение доставлено. Мы скоро с вами свяжемся :)";
+    $msg = "Благодарим вас. Мы свяжемся с вами в ближайшее время";
     $mail->isSMTP();   
     $mail->CharSet = "UTF-8";                                          
     $mail->SMTPAuth   = true;
