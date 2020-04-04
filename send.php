@@ -11,18 +11,18 @@ $phone = $_POST['phone'];
 
 $mail = new PHPMailer\PHPMailer\PHPMailer();
 try {
-    $msg = "Благодарим вас. Мы свяжемся с вами в ближайшее время";
+    $msg = "Спасибо за обращение. Мы свяжемся с вами в ближайшее время";
     $mail->isSMTP();   
     $mail->CharSet = "UTF-8";                                          
     $mail->SMTPAuth   = true;
 
     // Настройки вашей почты
-    $mail->Host       = 'smtp.mail.ru'; // SMTP сервера GMAIL
-    $mail->Username   = 'web.shcherbakov@inbox.ru'; // Логин на почте
-    $mail->Password   = '9Hc-ycg-ycd-9ER'; // Пароль на почте
+    $mail->Host       = 'mail.ipipe.ru'; // SMTP сервера GMAIL
+    $mail->Username   = 'kazhe94@norathedog.ru'; // Логин на почте
+    $mail->Password   = 'n7F1D2V8c3n3'; // Пароль на почте
     $mail->SMTPSecure = 'ssl';
     $mail->Port       = 465;
-    $mail->setFrom('web.shcherbakov@inbox.ru'); // Адрес самой почты и имя отправителя
+    $mail->setFrom('kazhe94@norathedog.ru'); // Адрес самой почты и имя отправителя
 
     // Получатель письма
     $mail->addAddress('evgeniisherbakov@mail.ru');  

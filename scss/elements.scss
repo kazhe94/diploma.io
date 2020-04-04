@@ -129,12 +129,14 @@
 }
 label {
   font-size: 12px;
+  display: block;
 }
 .input {
   display: block;
   padding: 10px;
   width: 300px;
   margin-bottom: 20px;
+  box-sizing: border-box;
   &:last-child {
     margin-bottom: 0;
   }
@@ -314,4 +316,42 @@ label {
     left: 35%;
     transform: rotate(-15deg) scale(0.8);
   }
+}
+.popup-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 100;
+  display: none;
+  width: 500px;
+  height: 400px;
+  transition: 0.5s;
+  margin: 0 auto;
+  transform: translateY(50%);
+  background-color: #fff;
+  font-size: 40px;
+}
+.popup-body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 20px;
+  height: 100%;
+  border: 2px solid #f26522;
+  &__title {
+    font-size: 50px;
+    letter-spacing: 10px;
+  }
+  &__text {
+    font-size: 24px;
+    text-align: center;
+    margin-top: 50px;
+    line-height: 40px;
+  }
+}
+input.error {
+  border: 2px solid red;
 }

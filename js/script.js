@@ -68,5 +68,23 @@ $( document ).ready(function() {
           $('body').removeClass('stop-scroll');
         }
         });
+
+      $('#phone-input').mask("+7(999)999-99-99");
+
+      $('#form').validate({
+        errorPlacement: function(error, element) {
+          return false
+      },
+        rules: {
+          name: {
+          required: true,
+          minlength: 3
+          },
+          phone: {
+            required: true,
+            minlength: 10
+          }
+        },
+      });
 });
 

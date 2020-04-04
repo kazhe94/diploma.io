@@ -9,6 +9,9 @@
 	<link rel="stylesheet" href="css/swiper.min.css">
 	<link rel="stylesheet" href="css/style.css">
 	<link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+	<script src="js/jquery-3.4.1.min.js"></script>
+	<script src="js/send.js"></script>
+	<script src="js/jquery.validate.min.js"></script>
 </head>
 <body>
 	<!-- =============header============= -->
@@ -37,13 +40,13 @@
 		<div class="modal-form-wrapper">
 			<h3 class="form-title form-text">Укажите ваши контакты</h3>
 			<h5 class="form-subtitle form-text">И я свяжусь с вами</h5>
-			<form action="send.php" class="modal-form" method="POST">
-				<label for="name-input">Как вас зовут?</label>
+			<form id="form" action="send.php" class="modal-form" method="POST">
+				<label for="name-input" class="input-label">Как вас зовут?</label>
 				<input id="name-input" type="text" class="input" name="name">
-				<label for="phone-input">Введите ваш номер телефона</label>
-				<input id="phone-input" type="tel" class="input" name="phone">
-				<label for="email-input">Введите ваш email</label>
-				<input id="email-input" type="email" class="input" name="email">
+				<label for="phone-input" class="input-label">Введите ваш номер телефона</label>
+				<input id="phone-input" type="tel" class="input" name="phone" placeholder="+7(___)-___-__-__">
+				<label for="email-input" class="input-label">Введите ваш email</label>
+				<input id="email-input" type="email" class="input" name="email" placeholder="your_mail@example.com">
 				<button class="form-button">Заказать звонок</button>
 			</form>
 			<a class="close-button">
@@ -51,6 +54,12 @@
 			</a>
 		</div>
 	</div>
+	<div class="popup-container">
+		<div class="popup-body">
+			<h4 class="popup-body__title">Спасибо</h4>
+			<p class="popup-body__text">Ваша заявка принята, мы свяжемся с вами в ближайшее время</p>
+		</div>		
+	</div>		
 
 
 	<!-- =============main============= -->
@@ -182,35 +191,9 @@
 			<p class="copyright">&copy; Евгений Щербаков, 2019-2020</p>
 		</div>
 	</footer>
-	<script src="js/jquery-3.4.1.min.js"></script>
 	<script src="js/swiper.min.js"></script>
 	<script src="js/script.js"></script>
-	<script>
-		// Отправка данных на сервер
-		$('#form').trigger('reset');
-		$(function() {
-		  'use strict';
-		  $('#form').on('submit', function(e) {
-			e.preventDefault();
-			$.ajax({
-			  url: 'send.php',
-			  type: 'POST',
-			  contentType: false,
-			  processData: false,
-			  data: new FormData(this),
-			  success: function(msg) {
-				console.log(msg);
-				if (msg == 'ok') {
-				  alert('Сообщение отправлено');
-				  $('#form').trigger('reset'); // очистка формы
-				} else {
-				  alert('Ошибка');
-				}
-			  }
-			});
-		  });
-		});
-		</script>
+	<script src="js/jquery.maskedinput.min.js"></script>
 		
 </body>
 </html>
